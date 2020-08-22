@@ -1,0 +1,769 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/land/monochrome_tilemap_packed.png" type="Texture" id=1]
+[ext_resource path="res://echelle.gd" type="Script" id=2]
+[ext_resource path="res://echellemovement.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.69254, 556.929 )
+
+[node name="main" type="Node2D"]
+position = Vector2( 509.375, 599.251 )
+script = ExtResource( 2 )
+
+[node name="echelle" type="Node2D" parent="."]
+position = Vector2( -510.691, -5.33936 )
+script = ExtResource( 3 )
+
+[node name="echelle14" type="Sprite" parent="echelle"]
+position = Vector2( 527.561, -566.563 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle15" type="Sprite" parent="echelle"]
+position = Vector2( 527.581, -554.569 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle16" type="Sprite" parent="echelle"]
+position = Vector2( 527.561, -542.63 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle17" type="Sprite" parent="echelle"]
+position = Vector2( 527.585, -530.582 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle18" type="Sprite" parent="echelle"]
+position = Vector2( 527.566, -518.643 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle19" type="Sprite" parent="echelle"]
+position = Vector2( 527.585, -506.649 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle20" type="Sprite" parent="echelle"]
+position = Vector2( 527.566, -494.71 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle21" type="Sprite" parent="echelle"]
+position = Vector2( 527.505, -482.728 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle22" type="Sprite" parent="echelle"]
+position = Vector2( 527.486, -470.789 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle23" type="Sprite" parent="echelle"]
+position = Vector2( 527.505, -458.795 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle24" type="Sprite" parent="echelle"]
+position = Vector2( 527.486, -446.856 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle25" type="Sprite" parent="echelle"]
+position = Vector2( 527.462, -434.815 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle26" type="Sprite" parent="echelle"]
+position = Vector2( 527.442, -422.876 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle27" type="Sprite" parent="echelle"]
+position = Vector2( 527.462, -410.883 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle28" type="Sprite" parent="echelle"]
+position = Vector2( 527.442, -398.944 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle29" type="Sprite" parent="echelle"]
+position = Vector2( 527.382, -386.96 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle30" type="Sprite" parent="echelle"]
+position = Vector2( 527.363, -375.021 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle31" type="Sprite" parent="echelle"]
+position = Vector2( 527.382, -363.029 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle32" type="Sprite" parent="echelle"]
+position = Vector2( 527.363, -351.089 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle33" type="Sprite" parent="echelle"]
+position = Vector2( 527.337, -339.091 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle34" type="Sprite" parent="echelle"]
+position = Vector2( 527.318, -327.152 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle35" type="Sprite" parent="echelle"]
+position = Vector2( 527.337, -315.158 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle36" type="Sprite" parent="echelle"]
+position = Vector2( 527.318, -303.219 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle37" type="Sprite" parent="echelle"]
+position = Vector2( 527.258, -291.237 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle38" type="Sprite" parent="echelle"]
+position = Vector2( 527.238, -279.298 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle39" type="Sprite" parent="echelle"]
+position = Vector2( 527.258, -267.303 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle40" type="Sprite" parent="echelle"]
+position = Vector2( 527.238, -255.365 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle41" type="Sprite" parent="echelle"]
+position = Vector2( 527.214, -243.323 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle42" type="Sprite" parent="echelle"]
+position = Vector2( 527.195, -231.385 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle43" type="Sprite" parent="echelle"]
+position = Vector2( 527.214, -219.391 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle44" type="Sprite" parent="echelle"]
+position = Vector2( 527.195, -207.451 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle45" type="Sprite" parent="echelle"]
+position = Vector2( 527.134, -195.469 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle46" type="Sprite" parent="echelle"]
+position = Vector2( 527.115, -183.531 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle47" type="Sprite" parent="echelle"]
+position = Vector2( 527.134, -171.537 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle48" type="Sprite" parent="echelle"]
+position = Vector2( 527.115, -159.597 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle49" type="Sprite" parent="echelle"]
+position = Vector2( 527.139, -147.55 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle50" type="Sprite" parent="echelle"]
+position = Vector2( 527.119, -135.611 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle51" type="Sprite" parent="echelle"]
+position = Vector2( 527.139, -123.617 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle52" type="Sprite" parent="echelle"]
+position = Vector2( 527.119, -111.677 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle53" type="Sprite" parent="echelle"]
+position = Vector2( 527.059, -99.6956 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle54" type="Sprite" parent="echelle"]
+position = Vector2( 527.04, -87.7566 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle65" type="Sprite" parent="echelle"]
+position = Vector2( 528.106, -1057.93 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle66" type="Sprite" parent="echelle"]
+position = Vector2( 528.126, -1045.94 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle67" type="Sprite" parent="echelle"]
+position = Vector2( 528.106, -1034 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle68" type="Sprite" parent="echelle"]
+position = Vector2( 528.13, -1021.95 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle69" type="Sprite" parent="echelle"]
+position = Vector2( 528.111, -1010.01 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle70" type="Sprite" parent="echelle"]
+position = Vector2( 528.13, -998.016 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle71" type="Sprite" parent="echelle"]
+position = Vector2( 528.111, -986.077 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle72" type="Sprite" parent="echelle"]
+position = Vector2( 528.05, -974.095 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle73" type="Sprite" parent="echelle"]
+position = Vector2( 528.031, -962.156 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle74" type="Sprite" parent="echelle"]
+position = Vector2( 528.05, -950.162 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle75" type="Sprite" parent="echelle"]
+position = Vector2( 528.031, -938.223 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle76" type="Sprite" parent="echelle"]
+position = Vector2( 528.007, -926.182 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle77" type="Sprite" parent="echelle"]
+position = Vector2( 527.987, -914.243 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle78" type="Sprite" parent="echelle"]
+position = Vector2( 528.007, -902.249 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle79" type="Sprite" parent="echelle"]
+position = Vector2( 527.987, -890.31 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle80" type="Sprite" parent="echelle"]
+position = Vector2( 527.927, -878.327 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle81" type="Sprite" parent="echelle"]
+position = Vector2( 527.908, -866.388 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle82" type="Sprite" parent="echelle"]
+position = Vector2( 527.927, -854.395 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle83" type="Sprite" parent="echelle"]
+position = Vector2( 527.908, -842.455 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle84" type="Sprite" parent="echelle"]
+position = Vector2( 527.882, -830.457 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle85" type="Sprite" parent="echelle"]
+position = Vector2( 527.863, -818.518 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle86" type="Sprite" parent="echelle"]
+position = Vector2( 527.882, -806.525 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle87" type="Sprite" parent="echelle"]
+position = Vector2( 527.863, -794.586 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle88" type="Sprite" parent="echelle"]
+position = Vector2( 527.803, -782.603 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle89" type="Sprite" parent="echelle"]
+position = Vector2( 527.783, -770.664 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle90" type="Sprite" parent="echelle"]
+position = Vector2( 527.803, -758.67 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle91" type="Sprite" parent="echelle"]
+position = Vector2( 527.783, -746.731 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle92" type="Sprite" parent="echelle"]
+position = Vector2( 527.759, -734.69 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle93" type="Sprite" parent="echelle"]
+position = Vector2( 527.74, -722.751 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle94" type="Sprite" parent="echelle"]
+position = Vector2( 527.759, -710.757 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle95" type="Sprite" parent="echelle"]
+position = Vector2( 527.74, -698.818 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle96" type="Sprite" parent="echelle"]
+position = Vector2( 527.679, -686.836 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle97" type="Sprite" parent="echelle"]
+position = Vector2( 527.66, -674.897 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle98" type="Sprite" parent="echelle"]
+position = Vector2( 527.679, -662.903 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle99" type="Sprite" parent="echelle"]
+position = Vector2( 527.66, -650.964 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle100" type="Sprite" parent="echelle"]
+position = Vector2( 527.684, -638.916 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle101" type="Sprite" parent="echelle"]
+position = Vector2( 527.664, -626.977 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle102" type="Sprite" parent="echelle"]
+position = Vector2( 527.684, -614.984 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle103" type="Sprite" parent="echelle"]
+position = Vector2( 527.664, -603.044 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle104" type="Sprite" parent="echelle"]
+position = Vector2( 527.604, -591.062 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle105" type="Sprite" parent="echelle"]
+position = Vector2( 527.585, -579.123 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle55" type="Sprite" parent="echelle"]
+position = Vector2( 527.059, -75.7625 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle56" type="Sprite" parent="echelle"]
+position = Vector2( 527.04, -63.8235 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle57" type="Sprite" parent="echelle"]
+position = Vector2( 527.016, -51.7825 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle58" type="Sprite" parent="echelle"]
+position = Vector2( 526.996, -39.8435 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle59" type="Sprite" parent="echelle"]
+position = Vector2( 527.016, -27.8494 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle60" type="Sprite" parent="echelle"]
+position = Vector2( 526.996, -15.9104 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle61" type="Sprite" parent="echelle"]
+position = Vector2( 526.936, -3.92847 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle62" type="Sprite" parent="echelle"]
+position = Vector2( 526.917, 8.0105 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle63" type="Sprite" parent="echelle"]
+position = Vector2( 526.936, 20.0046 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="echelle64" type="Sprite" parent="echelle"]
+position = Vector2( 526.917, 31.9436 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.3585, -31.6345 )
+vframes = 18
+hframes = 20
+frame = 81
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="echelle"]
+position = Vector2( 505.856, -1118.44 )
+scale = Vector2( 0.958923, 0.988624 )
+z_index = 1
+rect = Rect2( -2.5, 20, 20, 20 )
+
+[node name="Area2D" type="Area2D" parent="echelle"]
+position = Vector2( 503.025, -591.272 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="echelle/Area2D"]
+position = Vector2( 8.76769, 50.6693 )
+shape = SubResource( 1 )
+[connection signal="screen_entered" from="echelle/VisibilityEnabler2D" to="." method="_on_VisibilityEnabler2D_screen_entered"]
+[connection signal="screen_exited" from="echelle/VisibilityEnabler2D" to="." method="_on_VisibilityEnabler2D_screen_exited"]
+[connection signal="body_entered" from="echelle/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="echelle/Area2D" to="." method="_on_Area2D_body_exited"]

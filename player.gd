@@ -10,31 +10,36 @@ var jumper=false
 var cursed=false
 var timerset=false
 var cursednow=0
+var cursesound=false
 
 func _ready():
 	$smoke/AnimationPlayer.play("smoke")
-
-func _on_Timer_timeout():
-	if $miroir.visible==false:
-		$miroir.visible=true
-	else:
-		$miroir.visible=false
+	$Sprite/AnimationPlayer.play("player")
+	$AudioStreamPlayer.stream.loop=false
 
 func _process(delta):
 	velocite = Vector2()
+	if cursed==true:
+		if cursesound==false:
+			$AudioStreamPlayer.play()
+			cursesound=true
+	else:
+		cursesound=false
 	if cursednow>0:
-		var randmoove=randi()%3
-		if randmoove==0:
-			velocite=Vector2(5,0)
-		if randmoove==1:
-			velocite=Vector2(-5,0)
-		if randmoove==2:
-			velocite=Vector2(0,5)
-		if randmoove==3:
-			velocite=Vector2(0,-5)
-		move_and_slide(velocite*60)
-		cursednow-=1
-		timerset=false
+		if pause == false:
+			$AudioStreamPlayer.play()
+			var randmoove=randi()%3
+			if randmoove==0:
+				velocite=Vector2(5,0)
+			if randmoove==1:
+				velocite=Vector2(-5,0)
+			if randmoove==2:
+				velocite=Vector2(0,5)
+			if randmoove==3:
+				velocite=Vector2(0,-5)
+			move_and_slide(velocite*60)
+			cursednow-=1
+			timerset=false
 	else:
 		if cursed==true:
 			$smoke.visible=true
@@ -42,6 +47,10 @@ func _process(delta):
 				$"cursed timer".wait_time=rand_range(3,6)
 				$"cursed timer".start()
 				timerset=true
+		else:
+			timerset=false
+			$"cursed timer".stop()
+			$smoke.visible=false
 		if pause ==false:
 			if echelle>0:
 				if Input.is_action_pressed("ui_up"):

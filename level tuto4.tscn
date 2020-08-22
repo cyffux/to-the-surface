@@ -56,7 +56,7 @@ vframes = 22
 hframes = 48
 frame = 754
 
-[node name="wall24" type="Sprite" parent="wall"]
+[node name="potion" type="Sprite" parent="wall"]
 position = Vector2( 94.9441, -19.0436 )
 texture = ExtResource( 1 )
 vframes = 22
@@ -136,8 +136,6 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="wall/KinematicBody2D"]
 position = Vector2( 146.288, -0.0260506 )
 shape = SubResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="wall"]
 
 [node name="button" type="Sprite" parent="."]
 position = Vector2( 139.139, -17.9667 )

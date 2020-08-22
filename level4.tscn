@@ -1,0 +1,458 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://sprites/land/monochrome_packed.png" type="Texture" id=1]
+[ext_resource path="res://sprites/land/monochrome_tilemap_packed.png" type="Texture" id=2]
+[ext_resource path="res://level4.gd" type="Script" id=3]
+[ext_resource path="res://sound/soundgame/impactPlank_medium_001.ogg" type="AudioStream" id=4]
+[ext_resource path="res://sound.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 38.1555, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 21.6481, 8.1131 )
+
+[sub_resource type="Animation" id=4]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=10]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 745, 747, 746 ]
+}
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 7.82652, 8.03055 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 13.2268, 7.93665 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 7.94492, 4.85008 )
+
+[node name="level tuto" type="Node2D"]
+z_index = 2
+script = ExtResource( 3 )
+
+[node name="wall" type="Node2D" parent="."]
+
+[node name="wall22" type="Sprite" parent="wall"]
+position = Vector2( 438.45, 344.25 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 72
+
+[node name="wall12" type="Sprite" parent="wall"]
+position = Vector2( 408, 363.325 )
+rotation = -1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 217
+
+[node name="wall13" type="Sprite" parent="wall"]
+position = Vector2( 40, -7.99988 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall14" type="Sprite" parent="wall"]
+position = Vector2( 55.925, -7.99998 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="jumper8" type="Sprite" parent="wall"]
+position = Vector2( 344, 152 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper8"]
+anims/jump = SubResource( 1 )
+
+[node name="wall15" type="Sprite" parent="wall"]
+position = Vector2( 71.925, -7.99978 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall16" type="Sprite" parent="wall"]
+position = Vector2( 87.85, -7.99988 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall17" type="Sprite" parent="wall"]
+position = Vector2( 103.85, -7.99978 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall19" type="Sprite" parent="wall"]
+position = Vector2( 200, 88.0537 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall20" type="Sprite" parent="wall"]
+position = Vector2( 215.925, 88.0537 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall21" type="Sprite" parent="wall"]
+position = Vector2( 231.752, 88 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall31" type="Sprite" parent="wall"]
+position = Vector2( 423.925, 363.378 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall32" type="Sprite" parent="wall"]
+position = Vector2( 439.925, 363.378 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="wall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 69.983, -6.41682 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 218.197, 87.9739 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 423.871, 363.537 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 330.197, 167.974 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="wall"]
+
+[node name="jumper2" type="Sprite" parent="wall"]
+position = Vector2( 104, -24 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper2"]
+anims/jump = SubResource( 4 )
+
+[node name="jumper3" type="Sprite" parent="wall"]
+position = Vector2( 232, 72 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper3"]
+anims/jump = SubResource( 5 )
+
+[node name="jumper5" type="Sprite" parent="wall"]
+position = Vector2( 168, 24 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper5"]
+anims/jump = SubResource( 6 )
+
+[node name="jumper6" type="Sprite" parent="wall"]
+position = Vector2( 408, 232 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper6"]
+anims/jump = SubResource( 7 )
+
+[node name="wall23" type="Sprite" parent="wall"]
+position = Vector2( 312, 168.054 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall24" type="Sprite" parent="wall"]
+position = Vector2( 327.925, 168.054 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall25" type="Sprite" parent="wall"]
+position = Vector2( 343.752, 168 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="jumper9" type="Sprite" parent="wall"]
+position = Vector2( 424, 312 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper9"]
+anims/jump = SubResource( 8 )
+
+[node name="jumper10" type="Sprite" parent="wall"]
+position = Vector2( 280, 104 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper10"]
+anims/jump = SubResource( 9 )
+
+[node name="button" type="Sprite" parent="."]
+position = Vector2( 419.551, 344 )
+texture = ExtResource( 1 )
+vframes = 22
+hframes = 48
+frame = 745
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="button"]
+"anims/button press" = SubResource( 10 )
+
+[node name="Area2D" type="Area2D" parent="button"]
+position = Vector2( 0.166855, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button/Area2D"]
+position = Vector2( -0.177322, 0.0193176 )
+shape = SubResource( 11 )
+
+[node name="newlevel" type="Sprite" parent="."]
+position = Vector2( 16.379, -95.439 )
+texture = ExtResource( 1 )
+vframes = 22
+hframes = 48
+frame = 708
+
+[node name="hitbox" type="KinematicBody2D" parent="newlevel"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="newlevel/hitbox"]
+shape = SubResource( 12 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 16, -304 )
+
+[node name="read" type="Area2D" parent="."]
+
+[node name="VisibilityEnabler2D2" type="VisibilityEnabler2D" parent="."]
+position = Vector2( -3.77551, -112.793 )
+
+[node name="jumper" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="jumper"]
+position = Vector2( 104.205, -21.3962 )
+shape = SubResource( 13 )
+
+[node name="jumper2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="jumper2"]
+position = Vector2( 232.205, 74.6038 )
+shape = SubResource( 13 )
+
+[node name="jumper3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="jumper3"]
+position = Vector2( 168.205, 26.6038 )
+shape = SubResource( 13 )
+
+[node name="jumper4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="jumper4"]
+position = Vector2( 408.205, 234.604 )
+shape = SubResource( 13 )
+
+[node name="jumper5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="jumper5"]
+position = Vector2( 344.205, 154.604 )
+shape = SubResource( 13 )
+
+[node name="jumper6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="jumper6"]
+position = Vector2( 424.205, 314.604 )
+shape = SubResource( 13 )
+
+[node name="jumper7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="jumper7"]
+position = Vector2( 280.205, 106.604 )
+shape = SubResource( 13 )
+
+[node name="smoke" type="Area2D" parent="."]
+
+[node name="sound" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource( 4 )
+[connection signal="body_entered" from="button/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="screen_entered" from="VisibilityEnabler2D" to="." method="_on_VisibilityEnabler2D_screen_entered"]
+[connection signal="body_entered" from="read" to="." method="_on_read_body_entered"]
+[connection signal="screen_exited" from="VisibilityEnabler2D2" to="." method="_on_VisibilityEnabler2D2_screen_exited"]
+[connection signal="body_entered" from="jumper" to="." method="_on_jumper_body_entered"]
+[connection signal="body_entered" from="jumper2" to="." method="_on_jumper2_body_entered"]
+[connection signal="body_entered" from="jumper3" to="." method="_on_jumper3_body_entered"]
+[connection signal="body_entered" from="jumper4" to="." method="_on_jumper4_body_entered"]
+[connection signal="body_entered" from="jumper5" to="." method="_on_jumper5_body_entered"]
+[connection signal="body_entered" from="jumper6" to="." method="_on_jumper6_body_entered"]
+[connection signal="body_entered" from="jumper7" to="." method="_on_jumper7_body_entered"]
+[connection signal="body_entered" from="smoke" to="." method="_on_smoke_body_entered"]

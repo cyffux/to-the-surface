@@ -1,0 +1,498 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://sprites/land/monochrome_packed.png" type="Texture" id=1]
+[ext_resource path="res://sprites/land/monochrome_tilemap_packed.png" type="Texture" id=2]
+[ext_resource path="res://level tuto4.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 38.1555, 6.86151 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 8.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 24.2, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 46.8922, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 61.4731, 6.36215 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 15.8571, 10 )
+
+[sub_resource type="Animation" id=7]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 745, 747, 746 ]
+}
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 7.82652, 8.03055 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 13.2268, 7.93665 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 8.13363, 7.62196 )
+
+[node name="level tuto" type="Node2D"]
+z_index = 2
+script = ExtResource( 3 )
+
+[node name="wall" type="Node2D" parent="."]
+
+[node name="wall22" type="Sprite" parent="wall"]
+position = Vector2( -117.101, 24.25 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 72
+
+[node name="potion" type="Sprite" parent="wall"]
+position = Vector2( 88, -145.192 )
+texture = ExtResource( 1 )
+vframes = 22
+hframes = 48
+frame = 706
+
+[node name="wall13" type="Sprite" parent="wall"]
+position = Vector2( 40, -4.90285 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall14" type="Sprite" parent="wall"]
+position = Vector2( 55.925, -4.90295 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall15" type="Sprite" parent="wall"]
+position = Vector2( 71.925, -4.90276 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall16" type="Sprite" parent="wall"]
+position = Vector2( 87.85, -4.90285 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall17" type="Sprite" parent="wall"]
+position = Vector2( 103.85, -4.90276 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall19" type="Sprite" parent="wall"]
+position = Vector2( 136, -7.94628 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall20" type="Sprite" parent="wall"]
+position = Vector2( 152, -23.9463 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall21" type="Sprite" parent="wall"]
+position = Vector2( 168, -40 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall23" type="Sprite" parent="wall"]
+position = Vector2( 184.248, -55.9463 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall25" type="Sprite" parent="wall"]
+position = Vector2( 200, -71.9463 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall26" type="Sprite" parent="wall"]
+position = Vector2( 216, -88 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall27" type="Sprite" parent="wall"]
+position = Vector2( 232.173, -103.946 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall28" type="Sprite" parent="wall"]
+position = Vector2( 248, -104 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall29" type="Sprite" parent="wall"]
+position = Vector2( 184, -119.946 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall30" type="Sprite" parent="wall"]
+position = Vector2( 199.827, -120 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall31" type="Sprite" parent="wall"]
+position = Vector2( 152, -119.946 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall32" type="Sprite" parent="wall"]
+position = Vector2( 167.827, -120 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall33" type="Sprite" parent="wall"]
+position = Vector2( 120, -119.946 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall34" type="Sprite" parent="wall"]
+position = Vector2( 135.827, -120 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall35" type="Sprite" parent="wall"]
+position = Vector2( 88, -119.946 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall36" type="Sprite" parent="wall"]
+position = Vector2( 103.827, -120 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall37" type="Sprite" parent="wall"]
+position = Vector2( -56, -7.94626 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall38" type="Sprite" parent="wall"]
+position = Vector2( -40.173, -7.99997 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall40" type="Sprite" parent="wall"]
+position = Vector2( -72.173, -7.99997 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall39" type="Sprite" parent="wall"]
+position = Vector2( -103.827, 40.0537 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall42" type="Sprite" parent="wall"]
+position = Vector2( -88, 40 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall45" type="Sprite" parent="wall"]
+position = Vector2( -120, 40 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall41" type="Sprite" parent="wall"]
+position = Vector2( -120, -23.9463 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall43" type="Sprite" parent="wall"]
+position = Vector2( -152, -23.9463 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall44" type="Sprite" parent="wall"]
+position = Vector2( -136.173, -24 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall46" type="Sprite" parent="wall"]
+position = Vector2( -136, 40.0537 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall47" type="Sprite" parent="wall"]
+position = Vector2( -168, 40.0537 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall48" type="Sprite" parent="wall"]
+position = Vector2( -152.173, 40 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall49" type="Sprite" parent="wall"]
+position = Vector2( -199.827, 8.05373 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall50" type="Sprite" parent="wall"]
+position = Vector2( -184, 24 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall51" type="Sprite" parent="wall"]
+position = Vector2( -216, -7.99998 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall52" type="Sprite" parent="wall"]
+position = Vector2( -167.827, -23.9463 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall54" type="Sprite" parent="wall"]
+position = Vector2( -184, -24 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall53" type="Sprite" parent="wall"]
+position = Vector2( -231.827, -7.94627 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall55" type="Sprite" parent="wall"]
+position = Vector2( -248, -7.99998 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="wall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 68.9819, -5.98948 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( -150.266, -25.0109 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 136.25, -7.5 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 152, -23.75 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 167.75, -40.25 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 184.5, -55.75 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 199.75, -71.75 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 216, -88.5 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( -183.846, 22.9188 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( -200.244, 8.20309 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( -232.28, -5.81273 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( -55.0799, -6.81386 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( -127.829, 41.9078 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 141.69, -120.748 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 240.253, -101.921 )
+shape = SubResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="wall"]
+
+[node name="button" type="Sprite" parent="."]
+position = Vector2( -136, 24 )
+texture = ExtResource( 1 )
+vframes = 22
+hframes = 48
+frame = 745
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="button"]
+"anims/button press" = SubResource( 7 )
+
+[node name="Area2D" type="Area2D" parent="button"]
+position = Vector2( 0.166855, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button/Area2D"]
+position = Vector2( -0.177322, 0.0193176 )
+shape = SubResource( 8 )
+
+[node name="newlevel" type="Sprite" parent="."]
+position = Vector2( 16.379, -95.439 )
+texture = ExtResource( 1 )
+vframes = 22
+hframes = 48
+frame = 708
+
+[node name="hitbox" type="KinematicBody2D" parent="newlevel"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="newlevel/hitbox"]
+shape = SubResource( 9 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 15.9071, -322.528 )
+
+[node name="read" type="Area2D" parent="."]
+
+[node name="VisibilityEnabler2D2" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 3.05167, -257.532 )
+
+[node name="potion" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potion"]
+position = Vector2( 87.9717, -145.438 )
+shape = SubResource( 10 )
+[connection signal="body_entered" from="button/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="screen_entered" from="VisibilityEnabler2D" to="." method="_on_VisibilityEnabler2D_screen_entered"]
+[connection signal="body_entered" from="read" to="." method="_on_read_body_entered"]
+[connection signal="screen_exited" from="VisibilityEnabler2D2" to="." method="_on_VisibilityEnabler2D2_screen_exited"]
+[connection signal="body_entered" from="potion" to="." method="_on_potion_body_entered"]

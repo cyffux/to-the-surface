@@ -13,6 +13,8 @@ func _process(delta):
 		$begin.position.x+=5
 	if time > 5 and time <7:
 		$quit.position.x+=5
+	if time >9 and time < 11:
+		$"kenny jam".position.x-=6
 	time+=delta
 
 

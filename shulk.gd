@@ -15,12 +15,12 @@ func _on_Area2D_body_entered(body):
 
 func _physics_process(delta):
 	if left==true:
-		move_and_slide(Vector2(2,0)*10)
+		move_and_slide(Vector2(2,0)*20)
 		var move=move_and_slide(Vector2(2,0))
 		if move ==Vector2(0,0):
 			left=false
 	else:
-		move_and_slide(Vector2(-2,0)*10)
+		move_and_slide(Vector2(-2,0)*20)
 		var move=move_and_slide(Vector2(-2,0))
 		if move ==Vector2(0,0):
 			left=true

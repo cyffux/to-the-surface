@@ -42,12 +42,69 @@ func _on_VisibilityEnabler2D2_screen_exited():
 
 func _on_jumper_body_entered(body):
 	if body.name=="player":
-		$wall/jumper/AnimationPlayer.play()
+		$wall/jumper/AnimationPlayer.play("jump")
 		get_node("../player").jumper=true
 		velocitime=30
+		$sound/AudioStreamPlayer.play()
 
 
 func _on_smoke_body_entered(body):
 	get_node("../player").cursed=true
 	$smoke.queue_free()
 	$wall/smoke.queue_free()
+
+
+func _on_Area2D2_body_entered(body):
+	if body.name=="player":
+		$wall/jumper2/AnimationPlayer.play("jump")
+		get_node("../player").jumper=true
+		velocitime=30
+		$sound/AudioStreamPlayer.play()
+
+
+func _on_jumper3_body_entered(body):
+	if body.name=="player":
+		$wall/jumper3/AnimationPlayer.play("jump")
+		get_node("../player").jumper=true
+		velocitime=30
+		$sound/AudioStreamPlayer.play()
+
+
+func _on_Area2D3_body_entered(body):
+	if body.name=="player":
+		$wall/jumper4/AnimationPlayer.play("jump")
+		get_node("../player").jumper=true
+		velocitime=30
+		$sound/AudioStreamPlayer.play()
+
+
+func _on_Area2D4_body_entered(body):
+	if body.name=="player":
+		$wall/jumper5/AnimationPlayer.play("jump")
+		get_node("../player").jumper=true
+		velocitime=30
+		$sound/AudioStreamPlayer.play()
+
+
+func _on_Area2D5_body_entered(body):
+	if body.name=="player":
+		$wall/jumper6/AnimationPlayer.play("jump")
+		get_node("../player").jumper=true
+		velocitime=30
+		$sound/AudioStreamPlayer.play()
+
+
+func _on_Area2D6_body_entered(body):
+	if body.name=="player":
+		$wall/jumper7/AnimationPlayer.play("jump")
+		get_node("../player").jumper=true
+		velocitime=30
+		$sound/AudioStreamPlayer.play()
+
+
+func _on_Area2D7_body_entered(body):
+	if body.name=="player":
+		$wall/jumper8/AnimationPlayer.play("jump")
+		get_node("../player").jumper=true
+		velocitime=30
+		$sound/AudioStreamPlayer.play()

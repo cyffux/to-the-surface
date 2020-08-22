@@ -1,9 +1,11 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://sprites/land/monochrome_packed.png" type="Texture" id=1]
 [ext_resource path="res://sprites/land/monochrome_tilemap_packed.png" type="Texture" id=2]
 [ext_resource path="res://level tuto3.gd" type="Script" id=3]
 [ext_resource path="res://shulk.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sound/soundgame/impactPlank_medium_001.ogg" type="AudioStream" id=5]
+[ext_resource path="res://sound.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "jump"
@@ -21,7 +23,7 @@ tracks/0/keys = {
 "values": [ 163, 164, 165, 165, 164, 163 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=2]
 resource_name = "jump"
 length = 0.6
 tracks/0/type = "value"
@@ -37,7 +39,7 @@ tracks/0/keys = {
 "values": [ 163, 164, 165, 165, 164, 163 ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=3]
 resource_name = "jump"
 length = 0.6
 tracks/0/type = "value"
@@ -53,97 +55,7 @@ tracks/0/keys = {
 "values": [ 163, 164, 165, 165, 164, 163 ]
 }
 
-[sub_resource type="Animation" id=12]
-resource_name = "jump"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 163, 164, 165, 165, 164, 163 ]
-}
-
-[sub_resource type="Animation" id=13]
-resource_name = "jump"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 163, 164, 165, 165, 164, 163 ]
-}
-
-[sub_resource type="Animation" id=14]
-resource_name = "jump"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 163, 164, 165, 165, 164, 163 ]
-}
-
-[sub_resource type="Animation" id=15]
-resource_name = "jump"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 163, 164, 165, 165, 164, 163 ]
-}
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 38.1555, 10 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 21.6481, 8.1131 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 14.0901, 10 )
-
-[sub_resource type="RectangleShape2D" id=17]
-
-[sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 79.3152, 10 )
-
-[sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 10, 29.7404 )
-
-[sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 48.2025, 10 )
-
-[sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 10, 136.513 )
-
-[sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 10, 201.155 )
-
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=4]
 resource_name = "jump"
 length = 0.6
 tracks/0/type = "value"
@@ -160,6 +72,95 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=5]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 38.1555, 10 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 21.6481, 8.1131 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 14.0901, 10 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 79.3152, 10 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 10, 29.7404 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 48.2025, 10 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 10, 136.513 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 10, 201.155 )
+
+[sub_resource type="Animation" id=17]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=18]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -173,16 +174,16 @@ tracks/0/keys = {
 "values": [ 745, 747, 746 ]
 }
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 7.82652, 8.03055 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 13.2268, 7.93665 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 7.98051, 7.82941 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 7.94492, 4.85008 )
 
 [node name="level tuto" type="Node2D"]
@@ -314,7 +315,7 @@ hframes = 20
 frame = 236
 
 [node name="jumper" type="Sprite" parent="wall"]
-position = Vector2( 270.885, 283.533 )
+position = Vector2( 270.885, 281.958 )
 texture = ExtResource( 2 )
 vframes = 20
 hframes = 20
@@ -331,7 +332,7 @@ hframes = 20
 frame = 163
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper2"]
-anims/jump = SubResource( 10 )
+anims/jump = SubResource( 2 )
 
 [node name="jumper3" type="Sprite" parent="wall"]
 position = Vector2( 270.812, 170.37 )
@@ -341,7 +342,7 @@ hframes = 20
 frame = 163
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper3"]
-anims/jump = SubResource( 11 )
+anims/jump = SubResource( 3 )
 
 [node name="jumper4" type="Sprite" parent="wall"]
 position = Vector2( 271.442, 104.224 )
@@ -351,7 +352,7 @@ hframes = 20
 frame = 163
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper4"]
-anims/jump = SubResource( 12 )
+anims/jump = SubResource( 4 )
 
 [node name="jumper5" type="Sprite" parent="wall"]
 position = Vector2( 271.479, 36.3384 )
@@ -361,7 +362,7 @@ hframes = 20
 frame = 163
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper5"]
-anims/jump = SubResource( 13 )
+anims/jump = SubResource( 5 )
 
 [node name="jumper6" type="Sprite" parent="wall"]
 position = Vector2( 270.812, -28.0676 )
@@ -371,7 +372,7 @@ hframes = 20
 frame = 163
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper6"]
-anims/jump = SubResource( 14 )
+anims/jump = SubResource( 6 )
 
 [node name="jumper7" type="Sprite" parent="wall"]
 position = Vector2( 271.442, -94.2134 )
@@ -381,7 +382,7 @@ hframes = 20
 frame = 163
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper7"]
-anims/jump = SubResource( 15 )
+anims/jump = SubResource( 7 )
 
 [node name="wall23" type="Sprite" parent="wall"]
 position = Vector2( 177.1, -35.0617 )
@@ -849,43 +850,43 @@ frame = 197
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall/KinematicBody2D"]
 position = Vector2( 62.2985, 1.6366 )
-shape = SubResource( 2 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="wall/KinematicBody2D"]
 position = Vector2( 146.288, -0.0260506 )
-shape = SubResource( 3 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="wall/KinematicBody2D"]
 position = Vector2( 181.819, -13.8699 )
-shape = SubResource( 4 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="wall/KinematicBody2D"]
 position = Vector2( 235.559, -141.149 )
-shape = SubResource( 4 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="wall/KinematicBody2D"]
 position = Vector2( 271.622, 302.914 )
-shape = SubResource( 17 )
+shape = SubResource( 11 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="wall/KinematicBody2D"]
 position = Vector2( 183.233, 319.177 )
-shape = SubResource( 18 )
+shape = SubResource( 12 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="wall/KinematicBody2D"]
 position = Vector2( 94.1377, 288.772 )
-shape = SubResource( 19 )
+shape = SubResource( 13 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="wall/KinematicBody2D"]
 position = Vector2( 150.706, 252.709 )
-shape = SubResource( 20 )
+shape = SubResource( 14 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="wall/KinematicBody2D"]
 position = Vector2( 190.304, 113.409 )
-shape = SubResource( 21 )
+shape = SubResource( 15 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="wall/KinematicBody2D"]
 position = Vector2( 227.762, 50.4804 )
-shape = SubResource( 22 )
+shape = SubResource( 16 )
 
 [node name="Sprite" type="Sprite" parent="wall"]
 
@@ -897,7 +898,7 @@ hframes = 20
 frame = 163
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper8"]
-anims/jump = SubResource( 16 )
+anims/jump = SubResource( 17 )
 
 [node name="shulk" parent="wall" instance=ExtResource( 4 )]
 position = Vector2( 188.324, 297.527 )
@@ -910,14 +911,14 @@ hframes = 48
 frame = 745
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="button"]
-"anims/button press" = SubResource( 5 )
+"anims/button press" = SubResource( 18 )
 
 [node name="Area2D" type="Area2D" parent="button"]
 position = Vector2( 0.166855, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="button/Area2D"]
 position = Vector2( -0.177322, 0.0193176 )
-shape = SubResource( 6 )
+shape = SubResource( 19 )
 
 [node name="newlevel" type="Sprite" parent="."]
 position = Vector2( 16.379, -95.439 )
@@ -929,7 +930,7 @@ frame = 708
 [node name="hitbox" type="KinematicBody2D" parent="newlevel"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="newlevel/hitbox"]
-shape = SubResource( 7 )
+shape = SubResource( 20 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
 position = Vector2( 15.9071, -322.528 )
@@ -938,7 +939,7 @@ position = Vector2( 15.9071, -322.528 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="read"]
 position = Vector2( 177.243, -35.1593 )
-shape = SubResource( 8 )
+shape = SubResource( 21 )
 
 [node name="VisibilityEnabler2D2" type="VisibilityEnabler2D" parent="."]
 position = Vector2( 3.05167, -257.532 )
@@ -946,41 +947,65 @@ position = Vector2( 3.05167, -257.532 )
 [node name="jumper" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="jumper"]
-position = Vector2( 270.715, 286.325 )
-shape = SubResource( 9 )
+position = Vector2( 270.715, 285.38 )
+shape = SubResource( 22 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="jumper"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 271.72, 237 )
-shape = SubResource( 9 )
+shape = SubResource( 22 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="jumper"]
-position = Vector2( 271.09, 173.689 )
-shape = SubResource( 9 )
+[node name="Area2D6" type="Area2D" parent="."]
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="jumper"]
-position = Vector2( 271.405, 107.858 )
-shape = SubResource( 9 )
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="jumper"]
-position = Vector2( 271.72, 39.1927 )
-shape = SubResource( 9 )
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="jumper"]
-position = Vector2( 270.775, -25.0633 )
-shape = SubResource( 9 )
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="jumper"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D6"]
 position = Vector2( 271.405, -91.5241 )
-shape = SubResource( 9 )
+shape = SubResource( 22 )
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="jumper"]
+[node name="Area2D7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D7"]
 position = Vector2( 271.107, -141.768 )
-shape = SubResource( 9 )
+shape = SubResource( 22 )
 
-[node name="smoke" type="Area2D" parent="."]
+[node name="Area2D4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2( 271.72, 39.1927 )
+shape = SubResource( 22 )
+
+[node name="Area2D5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2( 270.775, -25.0633 )
+shape = SubResource( 22 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( 271.405, 107.858 )
+shape = SubResource( 22 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 271.09, 173.689 )
+shape = SubResource( 22 )
+
+[node name="sound" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource( 5 )
 [connection signal="body_entered" from="button/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="screen_entered" from="VisibilityEnabler2D" to="." method="_on_VisibilityEnabler2D_screen_entered"]
 [connection signal="body_entered" from="read" to="." method="_on_read_body_entered"]
 [connection signal="screen_exited" from="VisibilityEnabler2D2" to="." method="_on_VisibilityEnabler2D2_screen_exited"]
 [connection signal="body_entered" from="jumper" to="." method="_on_jumper_body_entered"]
-[connection signal="body_entered" from="smoke" to="." method="_on_smoke_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="Area2D6" to="." method="_on_Area2D6_body_entered"]
+[connection signal="body_entered" from="Area2D7" to="." method="_on_Area2D7_body_entered"]
+[connection signal="body_entered" from="Area2D4" to="." method="_on_Area2D4_body_entered"]
+[connection signal="body_entered" from="Area2D5" to="." method="_on_Area2D5_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_jumper3_body_entered"]

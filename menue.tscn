@@ -5,7 +5,7 @@
 [ext_resource path="res://sprites/ui/redbutton/redbutton1.png" type="Texture" id=3]
 [ext_resource path="res://sound/music/menu.wav" type="AudioStream" id=4]
 [ext_resource path="res://sound/ui/click1.ogg" type="AudioStream" id=5]
-[ext_resource path="res://sprites/land/monochrome_tilemap_packed.png" type="Texture" id=6]
+[ext_resource path="res://sprites/land/to the surface game.png" type="Texture" id=6]
 
 [node name="menue" type="Node2D"]
 script = ExtResource( 1 )
@@ -18,6 +18,7 @@ margin_top = -1.68179
 margin_right = -3.54288
 margin_bottom = 97.3182
 custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "TO THE
 SURFACE"
 __meta__ = {
@@ -85,13 +86,23 @@ autoplay = true
 stream = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 519.052, 304.22 )
-scale = Vector2( 65.8816, 39.0275 )
-z_index = -1
+position = Vector2( 514.052, 300.254 )
+scale = Vector2( 1.00908, 0.591634 )
+z_index = -4
 texture = ExtResource( 6 )
-vframes = 19
-hframes = 19
-frame = 340
+
+[node name="kenny jam" type="Node2D" parent="."]
+
+[node name="kenny jam" type="Label" parent="kenny jam"]
+margin_left = 1100.07
+margin_top = 525.43
+margin_right = 1300.07
+margin_bottom = 573.43
+custom_fonts/font = ExtResource( 2 )
+text = "KENNY JAM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="mouse_entered" from="begin/Button" to="." method="_on_Button_mouse_entered"]
 [connection signal="mouse_exited" from="begin/Button" to="." method="_on_Button_mouse_exited"]
 [connection signal="pressed" from="begin/Button" to="." method="_on_Button_pressed"]

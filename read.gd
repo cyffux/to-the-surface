@@ -7,6 +7,9 @@ var text=""
 
 func _ready():
 	$AudioStreamPlayer.stream.loop=false
+	$AudioStreamPlayer2.stream.loop=false
+	$AudioStreamPlayer3.stream.loop=false
+	$AudioStreamPlayer2.play()
 
 
 func _process(delta):
@@ -20,6 +23,8 @@ func _process(delta):
 		$Button.visible=true
 		if order<0:
 			get_parent().get_node("player").pause=false
+			if get_parent().leveln==12:
+				get_tree().quit()
 			queue_free()
 
 
@@ -37,3 +42,4 @@ func _on_Button_pressed():
 	time=0
 	$Button.visible=false
 	$Node2D2/Label.visible=false
+	$AudioStreamPlayer3.play()

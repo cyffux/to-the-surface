@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://sprites/land/monochrome_tilemap_packed.png" type="Texture" id=1]
 [ext_resource path="res://rockpiece.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="rock1" type="Node2D"]
 script = ExtResource( 2 )
@@ -14,4 +16,10 @@ frame = 11
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
 rect = Rect2( -10, 50, 20, 20 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
 [connection signal="screen_exited" from="VisibilityEnabler2D" to="." method="_on_VisibilityEnabler2D_screen_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://mainscene.gd" type="Script" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://sound/hit/footstep_carpet_003.ogg" type="AudioStream" id=9]
 [ext_resource path="res://ui.tscn" type="PackedScene" id=10]
 [ext_resource path="res://sound/music/gameover.wav" type="AudioStream" id=11]
+[ext_resource path="res://sound/music/cavesound.wav" type="AudioStream" id=12]
+[ext_resource path="res://sound/soundgame/switch_001.ogg" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 676.228, 10 )
@@ -30,12 +32,15 @@ script = ExtResource( 4 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="audio"]
 stream = ExtResource( 5 )
+volume_db = -6.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="audio"]
 stream = ExtResource( 8 )
+volume_db = -6.0
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="audio"]
 stream = ExtResource( 6 )
+volume_db = -6.0
 
 [node name="Timer" type="Timer" parent="audio"]
 wait_time = 0.75
@@ -43,13 +48,22 @@ autostart = true
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="audio"]
 stream = ExtResource( 9 )
+volume_db = -6.0
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="audio"]
 stream = ExtResource( 7 )
+volume_db = -6.0
 
 [node name="game over" type="AudioStreamPlayer" parent="audio"]
 stream = ExtResource( 11 )
 volume_db = 1.0
+
+[node name="musique" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource( 12 )
+autoplay = true
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource( 13 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -60,4 +74,5 @@ shape = SubResource( 1 )
 [node name="ui" parent="." instance=ExtResource( 10 )]
 visible = false
 [connection signal="timeout" from="audio/Timer" to="audio" method="_on_Timer_timeout"]
+[connection signal="finished" from="audio/musique" to="." method="_on_musique_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

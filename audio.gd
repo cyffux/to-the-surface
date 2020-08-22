@@ -6,6 +6,7 @@ func _ready():
 	$AudioStreamPlayer3.stream.loop=false
 	$AudioStreamPlayer4.stream.loop=false
 	$AudioStreamPlayer5.stream.loop=false
+	$AudioStreamPlayer6.stream.loop=false
 
 func _on_Timer_timeout():
 	if get_parent().over==false:

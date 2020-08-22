@@ -59,7 +59,7 @@ hframes = 20
 frame = 72
 
 [node name="wall23" type="Sprite" parent="wall"]
-position = Vector2( -32.7067, -35.0617 )
+position = Vector2( -32.1455, -38.1485 )
 texture = ExtResource( 1 )
 vframes = 22
 hframes = 48
@@ -267,7 +267,7 @@ position = Vector2( 14.3155, -502.076 )
 [node name="read" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="read"]
-position = Vector2( -32.5637, -35.1593 )
+position = Vector2( -32.0025, -38.2461 )
 shape = SubResource( 8 )
 
 [node name="VisibilityEnabler2D2" type="VisibilityEnabler2D" parent="."]

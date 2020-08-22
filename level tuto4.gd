@@ -43,3 +43,5 @@ func _on_VisibilityEnabler2D2_screen_exited():
 
 func _on_potion_body_entered(body):
 	get_parent().get_node("player").cursed=false
+	$potion.queue_free()
+	$wall/potion.queue_free()

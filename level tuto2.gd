@@ -45,9 +45,10 @@ func _on_VisibilityEnabler2D2_screen_exited():
 
 func _on_jumper_body_entered(body):
 	if body.name=="player":
-		$wall/jumper/AnimationPlayer.play()
+		$wall/jumper/AnimationPlayer.play("jump")
 		get_node("../player").jumper=true
 		velocitime=30
+		$sound/AudioStreamPlayer.play()
 
 
 func _on_smoke_body_entered(body):

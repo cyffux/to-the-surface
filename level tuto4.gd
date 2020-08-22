@@ -30,7 +30,7 @@ func _on_VisibilityEnabler2D_screen_entered():
 func _on_read_body_entered(body):
 	get_parent().get_node("player").pause=true
 	var child = load("res://read.tscn").instance()
-	child.text="YOU CAN FIGHT THE CURSE WITH A POTION. BUT IS JUST TEMPORARY. THE CURSE MAY STILL COME"
+	child.text="YOU CAN FIGHT THE CURSE WITH A POTION. BUT IT IS JUST TEMPORARY. THE CURSE MAY STILL COME"
 	$wall/wall23.queue_free()
 	$read.queue_free()
 	get_parent().add_child(child)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://mainscene.gd" type="Script" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://sound/music/gameover.wav" type="AudioStream" id=11]
 [ext_resource path="res://sound/music/cavesound.wav" type="AudioStream" id=12]
 [ext_resource path="res://sound/soundgame/switch_001.ogg" type="AudioStream" id=13]
+[ext_resource path="res://path.gd" type="Script" id=14]
+[ext_resource path="res://sprites/ui/path.png" type="Texture" id=15]
+[ext_resource path="res://sprites/ui/path2.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 676.228, 10 )
@@ -26,6 +29,7 @@ scale = Vector2( 1.9835, 2.04043 )
 z_index = 1
 
 [node name="background" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6.04422, 2.51984 )
 
 [node name="audio" type="Node" parent="."]
 script = ExtResource( 4 )
@@ -73,6 +77,79 @@ shape = SubResource( 1 )
 
 [node name="ui" parent="." instance=ExtResource( 10 )]
 visible = false
+
+[node name="path" type="Node2D" parent="."]
+script = ExtResource( 14 )
+
+[node name="path" type="Sprite" parent="path"]
+position = Vector2( 50.2151, 522.78 )
+rotation = -6.28319
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 15 )
+
+[node name="path2" type="Sprite" parent="path"]
+position = Vector2( 50.2292, 473.313 )
+rotation = -6.28319
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 15 )
+
+[node name="path3" type="Sprite" parent="path"]
+position = Vector2( 50.0968, 424.272 )
+rotation = -6.28319
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 15 )
+
+[node name="path4" type="Sprite" parent="path"]
+position = Vector2( 50.1108, 375.75 )
+rotation = -6.28319
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 15 )
+
+[node name="path5" type="Sprite" parent="path"]
+position = Vector2( 50.1121, 327.606 )
+rotation = -6.28319
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 15 )
+
+[node name="path6" type="Sprite" parent="path"]
+position = Vector2( 50.1262, 278.612 )
+rotation = -6.28319
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 15 )
+
+[node name="path7" type="Sprite" parent="path"]
+position = Vector2( 49.9937, 228.155 )
+rotation = -6.28319
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 15 )
+
+[node name="path8" type="Sprite" parent="path"]
+position = Vector2( 50.0078, 179.161 )
+rotation = -6.28319
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 15 )
+
+[node name="path9" type="Sprite" parent="path"]
+position = Vector2( 49.6402, 133.168 )
+rotation = -6.28319
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 15 )
+
+[node name="path10" type="Sprite" parent="path"]
+position = Vector2( 49.6542, 84.1735 )
+rotation = -6.28319
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 15 )
+
+[node name="position" type="Sprite" parent="path"]
+position = Vector2( 50.2124, 538.316 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 16 )
+
+[node name="monster timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
 [connection signal="timeout" from="audio/Timer" to="audio" method="_on_Timer_timeout"]
 [connection signal="finished" from="audio/musique" to="." method="_on_musique_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="monster timer" to="." method="_on_monster_timer_timeout"]

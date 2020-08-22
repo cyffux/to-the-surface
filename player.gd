@@ -97,7 +97,8 @@ func _on_jumtimer_timeout():
 
 
 func _on_Area2D_body_entered(body):
-	canjump=true
+	if not "echelle" in body.name:
+		canjump=true
 
 
 func _on_Area2D_body_exited(body):

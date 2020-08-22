@@ -25,12 +25,12 @@ func _on_VisibilityEnabler2D_screen_entered():
 func _on_read_body_entered(body):
 	get_parent().get_node("player").pause=true
 	var child = load("res://read.tscn").instance()
-	child.text="FOR COMPLETE A LEVEL, PUSH THE BUTTON. DON'T FORGET TO TAKE THE LADDER FAST AFTER YOU PUSH THE BUTTON"
+	child.text="TO COMPLETE A LEVEL, PASS IN FRONT OF THE BUTTON JUST AFTER THE ARROW. DON'T FORGET TO CLIMB ON THE LADDER FAST AFTER YOU ACTIVATE THE BUTTON"
 	$wall/wall23.queue_free()
 	$read.queue_free()
 	get_parent().add_child(child)
 
 
 func _on_VisibilityEnabler2D2_screen_exited():
-	get_parent().newlevel()
+	get_parent().newlevel( )
 	queue_free()

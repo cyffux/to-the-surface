@@ -33,7 +33,7 @@ func _on_VisibilityEnabler2D_screen_entered():
 func _on_read_body_entered(body):
 	get_parent().get_node("player").pause=true
 	var child = load("res://read.tscn").instance()
-	child.text="THE HUMANITY IS CURSED AND SHE LIVE IN THE CENTER OF THE EARTH SINCE 1000 YEARS. BE CAREFUL. CURSE WILL BEAT YOU AS YOU APPROACH THE SURFACE"
+	child.text="THE HUMANITY IS CURSED AND IT LIVES IN THE CENTER OF THE EARTH FOR 1000 YEARS. BE CAREFUL. MORE YOU ARE CLOSE TO THE SURFACE, MORE THE CURSE CAN BEAT YOU"
 	$wall/wall23.queue_free()
 	$read.queue_free()
 	get_parent().add_child(child)

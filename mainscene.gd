@@ -6,6 +6,7 @@ var over = false
 var leveln=0
 var stop = false
 var switchsound = true
+var flyingmonster = load("res://flying monster.tscn")
 
 
 func _process(delta):
@@ -52,7 +53,7 @@ func newlevel():
 		$player.level=true
 		level=true
 		var child=load("res://read.tscn").instance()
-		child.text="WHEN YOU GO IN THE SURFACE, YOU SACRIFICED YOUR LIFE. IN THE SAME TIME YOU DESTRUCT THE CURSE. YOU SAVE THE HUMANITY. CONGRATULATION. THANK YOU FOR PLAYING MY GAME"
+		child.text="WHEN YOU GO IN THE SURFACE, YOU SACRIFICE YOURSELF. IN THE SAME TIME YOU STOP THE CURSE. YOU SAVE THE HUMANITY. CONGRATULATION. THANK YOU FOR PLAYING MY GAME"
 		add_child(child)
 	if leveln==11:
 		leveln+=1
@@ -131,3 +132,12 @@ func newlevel():
 func _on_musique_finished():
 	if stop == false:
 		$audio/musique.play()
+
+
+func _on_monster_timer_timeout():
+	if level == false:
+		if $player.pause==false:
+			var child= flyingmonster.instance()
+			child.position.x=1200
+			child.position.y=rand_range(50,500)
+			add_child(child)

@@ -30,7 +30,7 @@ func _on_VisibilityEnabler2D_screen_entered():
 func _on_read_body_entered(body):
 	get_parent().get_node("player").pause=true
 	var child = load("res://read.tscn").instance()
-	child.text="IF YOU ARE HERE THE CURSE HAS BEEN HAPPENED TO YOU. MONSTERS LIVE UNDER THE SURFACE OF THE EARTH"
+	child.text="IF YOU ARE HERE,YOU ARE CURSED! MONSTERS ARE LIVING UNDER THE SURFACE OF THE EARTH"
 	$wall/wall23.queue_free()
 	$read.queue_free()
 	get_parent().add_child(child)

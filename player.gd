@@ -5,6 +5,14 @@ var level= false
 var jump = false
 var canjump=false
 var pause = false
+var velocite = Vector2()
+var jumper=false
+var cursed=false
+var timerset=false
+var cursednow=0
+
+func _ready():
+	$smoke/AnimationPlayer.play("smoke")
 
 func _on_Timer_timeout():
 	if $miroir.visible==false:
@@ -13,42 +21,66 @@ func _on_Timer_timeout():
 		$miroir.visible=false
 
 func _process(delta):
-	var velocite = Vector2()
-	if pause ==false:
-		if echelle>0:
-			if Input.is_action_pressed("ui_up"):
-				if position.y>10:
-					velocite.y-=2
-			if Input.is_action_pressed("ui_down"):
-				if position.y<590:
-					velocite.y+=2
-		if Input.is_action_pressed("ui_left"):
-			velocite.x-=1
-		if Input.is_action_pressed("ui_right"):
-			velocite.x+=1
-		if echelle ==0:
-			if Input.is_action_just_pressed("jump"):
-				if canjump==true:
-					jump=true
-					$jumtimer.start()
-			if Input.is_action_just_released("jump"):
-				jump=false
-			if jump == false:
-				velocite.y+=2
-			else:
-				velocite.y-=3
+	velocite = Vector2()
+	if cursednow>0:
+		var randmoove=randi()%3
+		if randmoove==0:
+			velocite=Vector2(5,0)
+		if randmoove==1:
+			velocite=Vector2(-5,0)
+		if randmoove==2:
+			velocite=Vector2(0,5)
+		if randmoove==3:
+			velocite=Vector2(0,-5)
 		move_and_slide(velocite*60)
+		cursednow-=1
+		timerset=false
 	else:
-		velocite.y+=2
-		move_and_slide(velocite*60)
+		if cursed==true:
+			$smoke.visible=true
+			if timerset==false:
+				$"cursed timer".wait_time=rand_range(3,6)
+				$"cursed timer".start()
+				timerset=true
+		if pause ==false:
+			if echelle>0:
+				if Input.is_action_pressed("ui_up"):
+					if position.y>10:
+						velocite.y-=2
+				if Input.is_action_pressed("ui_down"):
+					if position.y<590:
+						velocite.y+=2
+			if Input.is_action_pressed("ui_left"):
+				velocite.x-=1
+			if Input.is_action_pressed("ui_right"):
+				velocite.x+=1
+			if echelle ==0:
+				if Input.is_action_just_pressed("jump"):
+					if canjump==true:
+						jump=true
+						$jumtimer.start()
+				if Input.is_action_just_released("jump"):
+					jump=false
+				if jump == false:
+					velocite.y+=2
+				else:
+					velocite.y-=3
+			if jumper==true:
+				velocite.y-=6
+			move_and_slide(velocite*60)
+		else:
+			velocite.y+=2
+			move_and_slide(velocite*60)
 
 
 func _on_Area2D_area_entered(area):
-	echelle+=1
+	if "echelle" in area.name:
+		echelle+=1
 
 
 func _on_Area2D_area_exited(area):
-	echelle-=1
+	if "echelle" in area.name:
+		echelle-=1
 
 
 func _on_jumtimer_timeout():
@@ -61,3 +93,8 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D_body_exited(body):
 	canjump=false
+
+
+func _on_cursed_timer_timeout():
+	cursednow=20
+	

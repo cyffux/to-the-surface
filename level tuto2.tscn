@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://sprites/land/monochrome_packed.png" type="Texture" id=1]
 [ext_resource path="res://sprites/land/monochrome_tilemap_packed.png" type="Texture" id=2]
-[ext_resource path="res://level tuto.gd" type="Script" id=3]
+[ext_resource path="res://level tuto2.gd" type="Script" id=3]
+[ext_resource path="res://sprites/effect/smoke spritesheet.png" type="Texture" id=4]
+[ext_resource path="res://annimation/smoke.tres" type="Animation" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "jump"
@@ -20,7 +22,25 @@ tracks/0/keys = {
 "values": [ 163, 164, 165, 165, 164, 163 ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 38.1555, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 21.6481, 8.1131 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 14.0901, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 30.0858, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 47.5424, 8.11311 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 7.83719, 8.4877 )
+
+[sub_resource type="Animation" id=8]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -34,14 +54,19 @@ tracks/0/keys = {
 "values": [ 745, 747, 746 ]
 }
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 7.82652, 8.03055 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 13.2268, 7.93665 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 7.98051, 7.82941 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 7.94492, 4.85008 )
+
+[sub_resource type="RectangleShape2D" id=13]
 
 [node name="level tuto" type="Node2D"]
 z_index = 2
@@ -57,7 +82,7 @@ hframes = 20
 frame = 72
 
 [node name="jumper" type="Sprite" parent="wall"]
-position = Vector2( 479.24, -97.5341 )
+position = Vector2( 479.427, -96.9722 )
 texture = ExtResource( 2 )
 vframes = 20
 hframes = 20
@@ -253,7 +278,7 @@ hframes = 20
 frame = 236
 
 [node name="wall33" type="Sprite" parent="wall"]
-position = Vector2( 351.537, -79.3853 )
+position = Vector2( 351.537, -98.7099 )
 rotation = 3.14159
 texture = ExtResource( 2 )
 vframes = 20
@@ -261,7 +286,7 @@ hframes = 20
 frame = 236
 
 [node name="wall34" type="Sprite" parent="wall"]
-position = Vector2( 367.462, -79.3853 )
+position = Vector2( 367.462, -98.7099 )
 rotation = 3.14159
 texture = ExtResource( 2 )
 vframes = 20
@@ -269,7 +294,7 @@ hframes = 20
 frame = 236
 
 [node name="wall35" type="Sprite" parent="wall"]
-position = Vector2( 383.29, -79.439 )
+position = Vector2( 383.29, -98.7636 )
 rotation = 3.14159
 texture = ExtResource( 2 )
 vframes = 20
@@ -277,7 +302,7 @@ hframes = 20
 frame = 236
 
 [node name="wall36" type="Sprite" parent="wall"]
-position = Vector2( 398.59, -79.3853 )
+position = Vector2( 398.59, -98.7099 )
 rotation = 3.14159
 texture = ExtResource( 2 )
 vframes = 20
@@ -285,7 +310,7 @@ hframes = 20
 frame = 236
 
 [node name="wall37" type="Sprite" parent="wall"]
-position = Vector2( 414.515, -79.3853 )
+position = Vector2( 414.515, -98.7099 )
 rotation = 3.14159
 texture = ExtResource( 2 )
 vframes = 20
@@ -293,7 +318,7 @@ hframes = 20
 frame = 236
 
 [node name="wall38" type="Sprite" parent="wall"]
-position = Vector2( 430.343, -79.439 )
+position = Vector2( 430.343, -98.7636 )
 rotation = 3.14159
 texture = ExtResource( 2 )
 vframes = 20
@@ -342,7 +367,73 @@ frame = 197
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="wall"]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 62.2985, 1.6366 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 146.288, -0.0260506 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 303.335, -79.2261 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 399.227, -15.9226 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 181.819, -13.8699 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 343.04, -14.1471 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 249.411, -13.3979 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 390.986, -98.5507 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 431.066, -32.0294 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 447.173, -47.7616 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 462.53, -64.243 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 478.824, -80.1625 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 303.335, -16.2971 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 287.228, -32.0294 )
+shape = SubResource( 7 )
+
 [node name="Sprite" type="Sprite" parent="wall"]
+
+[node name="smoke" type="Sprite" parent="wall"]
+position = Vector2( 287.507, -55.2737 )
+scale = Vector2( 0.0487982, 0.049763 )
+texture = ExtResource( 4 )
+hframes = 10
+frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/smoke"]
+anims/smoke = ExtResource( 5 )
 
 [node name="button" type="Sprite" parent="."]
 position = Vector2( 289.221, -98.4912 )
@@ -352,14 +443,14 @@ hframes = 48
 frame = 745
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="button"]
-"anims/button press" = SubResource( 2 )
+"anims/button press" = SubResource( 8 )
 
 [node name="Area2D" type="Area2D" parent="button"]
 position = Vector2( 0.166855, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="button/Area2D"]
 position = Vector2( -0.177322, 0.0193176 )
-shape = SubResource( 3 )
+shape = SubResource( 9 )
 
 [node name="newlevel" type="Sprite" parent="."]
 position = Vector2( 16.379, -95.439 )
@@ -371,22 +462,34 @@ frame = 708
 [node name="hitbox" type="KinematicBody2D" parent="newlevel"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="newlevel/hitbox"]
-shape = SubResource( 4 )
+shape = SubResource( 10 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-position = Vector2( 14.3155, -502.076 )
+position = Vector2( 12.1966, -381.011 )
 
 [node name="read" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="read"]
 position = Vector2( 177.243, -35.1593 )
-shape = SubResource( 5 )
+shape = SubResource( 11 )
 
 [node name="VisibilityEnabler2D2" type="VisibilityEnabler2D" parent="."]
 position = Vector2( -3.77551, -112.793 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="jumper" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jumper"]
+position = Vector2( 479.632, -94.3684 )
+shape = SubResource( 12 )
+
+[node name="smoke" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="smoke"]
+position = Vector2( 287.114, -55.3569 )
+shape = SubResource( 13 )
 [connection signal="body_entered" from="button/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="screen_entered" from="VisibilityEnabler2D" to="." method="_on_VisibilityEnabler2D_screen_entered"]
 [connection signal="body_entered" from="read" to="." method="_on_read_body_entered"]
 [connection signal="screen_exited" from="VisibilityEnabler2D2" to="." method="_on_VisibilityEnabler2D2_screen_exited"]
+[connection signal="body_entered" from="jumper" to="." method="_on_jumper_body_entered"]
+[connection signal="body_entered" from="smoke" to="." method="_on_smoke_body_entered"]

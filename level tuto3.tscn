@@ -1,0 +1,986 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://sprites/land/monochrome_packed.png" type="Texture" id=1]
+[ext_resource path="res://sprites/land/monochrome_tilemap_packed.png" type="Texture" id=2]
+[ext_resource path="res://level tuto3.gd" type="Script" id=3]
+[ext_resource path="res://shulk.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 38.1555, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 21.6481, 8.1131 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 14.0901, 10 )
+
+[sub_resource type="RectangleShape2D" id=17]
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 79.3152, 10 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 10, 29.7404 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 48.2025, 10 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 10, 136.513 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 10, 201.155 )
+
+[sub_resource type="Animation" id=16]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 163, 164, 165, 165, 164, 163 ]
+}
+
+[sub_resource type="Animation" id=5]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 745, 747, 746 ]
+}
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 7.82652, 8.03055 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 13.2268, 7.93665 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 7.98051, 7.82941 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 7.94492, 4.85008 )
+
+[node name="level tuto" type="Node2D"]
+z_index = 2
+script = ExtResource( 3 )
+
+[node name="wall" type="Node2D" parent="."]
+
+[node name="wall22" type="Sprite" parent="wall"]
+position = Vector2( 247.472, -161.212 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 72
+
+[node name="wall63" type="Sprite" parent="wall"]
+position = Vector2( 111.843, 253.552 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall64" type="Sprite" parent="wall"]
+position = Vector2( 127.768, 253.552 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall65" type="Sprite" parent="wall"]
+position = Vector2( 143.768, 253.552 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall66" type="Sprite" parent="wall"]
+position = Vector2( 159.693, 253.552 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall67" type="Sprite" parent="wall"]
+position = Vector2( 175.693, 253.552 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall70" type="Sprite" parent="wall"]
+position = Vector2( 111.282, 317.048 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall71" type="Sprite" parent="wall"]
+position = Vector2( 127.207, 317.048 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall72" type="Sprite" parent="wall"]
+position = Vector2( 143.207, 317.048 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall73" type="Sprite" parent="wall"]
+position = Vector2( 159.132, 317.048 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall75" type="Sprite" parent="wall"]
+position = Vector2( 175.132, 317.048 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall76" type="Sprite" parent="wall"]
+position = Vector2( 190.691, 317.048 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall77" type="Sprite" parent="wall"]
+position = Vector2( 206.616, 317.048 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall78" type="Sprite" parent="wall"]
+position = Vector2( 222.616, 317.048 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall79" type="Sprite" parent="wall"]
+position = Vector2( 238.541, 317.048 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall80" type="Sprite" parent="wall"]
+position = Vector2( 254.541, 317.048 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="jumper" type="Sprite" parent="wall"]
+position = Vector2( 270.885, 283.533 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper"]
+anims/jump = SubResource( 1 )
+
+[node name="jumper2" type="Sprite" parent="wall"]
+position = Vector2( 271.479, 234.776 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper2"]
+anims/jump = SubResource( 10 )
+
+[node name="jumper3" type="Sprite" parent="wall"]
+position = Vector2( 270.812, 170.37 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper3"]
+anims/jump = SubResource( 11 )
+
+[node name="jumper4" type="Sprite" parent="wall"]
+position = Vector2( 271.442, 104.224 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper4"]
+anims/jump = SubResource( 12 )
+
+[node name="jumper5" type="Sprite" parent="wall"]
+position = Vector2( 271.479, 36.3384 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper5"]
+anims/jump = SubResource( 13 )
+
+[node name="jumper6" type="Sprite" parent="wall"]
+position = Vector2( 270.812, -28.0676 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper6"]
+anims/jump = SubResource( 14 )
+
+[node name="jumper7" type="Sprite" parent="wall"]
+position = Vector2( 271.442, -94.2134 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper7"]
+anims/jump = SubResource( 15 )
+
+[node name="wall23" type="Sprite" parent="wall"]
+position = Vector2( 177.1, -35.0617 )
+texture = ExtResource( 1 )
+vframes = 22
+hframes = 48
+frame = 754
+
+[node name="wall7" type="Sprite" parent="wall"]
+position = Vector2( 191.478, -16 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 196
+
+[node name="wall13" type="Sprite" parent="wall"]
+position = Vector2( 32.3155, 0.0535431 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall14" type="Sprite" parent="wall"]
+position = Vector2( 48.2405, 0.0534439 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall15" type="Sprite" parent="wall"]
+position = Vector2( 64.2405, 0.0536423 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall16" type="Sprite" parent="wall"]
+position = Vector2( 80.1655, 0.0535431 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall17" type="Sprite" parent="wall"]
+position = Vector2( 96.1655, 0.0536423 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall18" type="Sprite" parent="wall"]
+position = Vector2( 227.523, -16.6141 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall24" type="Sprite" parent="wall"]
+position = Vector2( 227.534, -32.531 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall25" type="Sprite" parent="wall"]
+position = Vector2( 227.459, -48.3108 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall26" type="Sprite" parent="wall"]
+position = Vector2( 227.47, -64.2277 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall27" type="Sprite" parent="wall"]
+position = Vector2( 227.42, -79.9588 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall28" type="Sprite" parent="wall"]
+position = Vector2( 227.431, -95.8757 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall29" type="Sprite" parent="wall"]
+position = Vector2( 227.356, -111.655 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall30" type="Sprite" parent="wall"]
+position = Vector2( 227.367, -127.572 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall81" type="Sprite" parent="wall"]
+position = Vector2( 243.366, -143.664 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall31" type="Sprite" parent="wall"]
+position = Vector2( 227.666, 110.121 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall32" type="Sprite" parent="wall"]
+position = Vector2( 227.677, 94.2045 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall33" type="Sprite" parent="wall"]
+position = Vector2( 227.602, 78.4248 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall34" type="Sprite" parent="wall"]
+position = Vector2( 227.613, 62.5079 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall35" type="Sprite" parent="wall"]
+position = Vector2( 227.563, 46.7767 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall36" type="Sprite" parent="wall"]
+position = Vector2( 227.574, 30.8598 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall37" type="Sprite" parent="wall"]
+position = Vector2( 227.499, 15.0801 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall38" type="Sprite" parent="wall"]
+position = Vector2( 227.51, -0.836838 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall39" type="Sprite" parent="wall"]
+position = Vector2( 191.645, 110.958 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall40" type="Sprite" parent="wall"]
+position = Vector2( 191.655, 95.0414 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall41" type="Sprite" parent="wall"]
+position = Vector2( 191.581, 79.2616 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall42" type="Sprite" parent="wall"]
+position = Vector2( 191.592, 63.3447 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall43" type="Sprite" parent="wall"]
+position = Vector2( 191.542, 47.6136 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall44" type="Sprite" parent="wall"]
+position = Vector2( 191.552, 31.6967 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall45" type="Sprite" parent="wall"]
+position = Vector2( 191.478, 15.9169 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall46" type="Sprite" parent="wall"]
+position = Vector2( 191.489, 1.81198e-05 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall47" type="Sprite" parent="wall"]
+position = Vector2( 191.788, 237.694 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall48" type="Sprite" parent="wall"]
+position = Vector2( 191.798, 221.777 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall49" type="Sprite" parent="wall"]
+position = Vector2( 191.724, 205.997 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall50" type="Sprite" parent="wall"]
+position = Vector2( 191.735, 190.08 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall51" type="Sprite" parent="wall"]
+position = Vector2( 191.685, 174.349 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall52" type="Sprite" parent="wall"]
+position = Vector2( 191.695, 158.432 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall53" type="Sprite" parent="wall"]
+position = Vector2( 191.621, 142.652 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall54" type="Sprite" parent="wall"]
+position = Vector2( 191.632, 126.736 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall68" type="Sprite" parent="wall"]
+position = Vector2( 95.1446, 284.958 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall69" type="Sprite" parent="wall"]
+position = Vector2( 95.1553, 269.041 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall74" type="Sprite" parent="wall"]
+position = Vector2( 95.1319, 300.736 )
+rotation = 4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall55" type="Sprite" parent="wall"]
+position = Vector2( 227.898, 236.951 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall56" type="Sprite" parent="wall"]
+position = Vector2( 227.909, 221.034 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall57" type="Sprite" parent="wall"]
+position = Vector2( 227.835, 205.254 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall58" type="Sprite" parent="wall"]
+position = Vector2( 227.845, 189.337 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall59" type="Sprite" parent="wall"]
+position = Vector2( 227.795, 173.606 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall60" type="Sprite" parent="wall"]
+position = Vector2( 227.806, 157.689 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall61" type="Sprite" parent="wall"]
+position = Vector2( 227.732, 141.909 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall62" type="Sprite" parent="wall"]
+position = Vector2( 227.742, 125.992 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall19" type="Sprite" parent="wall"]
+position = Vector2( 128.091, 0.0537415 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall20" type="Sprite" parent="wall"]
+position = Vector2( 144.016, 0.0537415 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="wall21" type="Sprite" parent="wall"]
+position = Vector2( 159.843, 3.8147e-05 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 236
+
+[node name="corner" type="Sprite" parent="wall"]
+position = Vector2( 175.842, -15.9975 )
+rotation = -1.57079
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 197
+
+[node name="corner2" type="Sprite" parent="wall"]
+position = Vector2( 191.631, 253.507 )
+rotation = -4.71238
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 197
+
+[node name="corner4" type="Sprite" parent="wall"]
+position = Vector2( 227.383, -143.57 )
+rotation = -7.85397
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 197
+
+[node name="corner3" type="Sprite" parent="wall"]
+position = Vector2( 270.484, 300.651 )
+rotation = -7.85397
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 197
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="wall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 62.2985, 1.6366 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 146.288, -0.0260506 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 181.819, -13.8699 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 235.559, -141.149 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 271.622, 302.914 )
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 183.233, 319.177 )
+shape = SubResource( 18 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 94.1377, 288.772 )
+shape = SubResource( 19 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 150.706, 252.709 )
+shape = SubResource( 20 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 190.304, 113.409 )
+shape = SubResource( 21 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="wall/KinematicBody2D"]
+position = Vector2( 227.762, 50.4804 )
+shape = SubResource( 22 )
+
+[node name="Sprite" type="Sprite" parent="wall"]
+
+[node name="jumper8" type="Sprite" parent="wall"]
+position = Vector2( 271.145, -144.457 )
+texture = ExtResource( 2 )
+vframes = 20
+hframes = 20
+frame = 163
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wall/jumper8"]
+anims/jump = SubResource( 16 )
+
+[node name="shulk" parent="wall" instance=ExtResource( 4 )]
+position = Vector2( 188.324, 297.527 )
+
+[node name="button" type="Sprite" parent="."]
+position = Vector2( 228.573, -161.462 )
+texture = ExtResource( 1 )
+vframes = 22
+hframes = 48
+frame = 745
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="button"]
+"anims/button press" = SubResource( 5 )
+
+[node name="Area2D" type="Area2D" parent="button"]
+position = Vector2( 0.166855, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button/Area2D"]
+position = Vector2( -0.177322, 0.0193176 )
+shape = SubResource( 6 )
+
+[node name="newlevel" type="Sprite" parent="."]
+position = Vector2( 16.379, -95.439 )
+texture = ExtResource( 1 )
+vframes = 22
+hframes = 48
+frame = 708
+
+[node name="hitbox" type="KinematicBody2D" parent="newlevel"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="newlevel/hitbox"]
+shape = SubResource( 7 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 15.9071, -322.528 )
+
+[node name="read" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="read"]
+position = Vector2( 177.243, -35.1593 )
+shape = SubResource( 8 )
+
+[node name="VisibilityEnabler2D2" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 3.05167, -257.532 )
+
+[node name="jumper" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jumper"]
+position = Vector2( 270.715, 286.325 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="jumper"]
+position = Vector2( 271.72, 237 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="jumper"]
+position = Vector2( 271.09, 173.689 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="jumper"]
+position = Vector2( 271.405, 107.858 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="jumper"]
+position = Vector2( 271.72, 39.1927 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="jumper"]
+position = Vector2( 270.775, -25.0633 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="jumper"]
+position = Vector2( 271.405, -91.5241 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="jumper"]
+position = Vector2( 271.107, -141.768 )
+shape = SubResource( 9 )
+
+[node name="smoke" type="Area2D" parent="."]
+[connection signal="body_entered" from="button/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="screen_entered" from="VisibilityEnabler2D" to="." method="_on_VisibilityEnabler2D_screen_entered"]
+[connection signal="body_entered" from="read" to="." method="_on_read_body_entered"]
+[connection signal="screen_exited" from="VisibilityEnabler2D2" to="." method="_on_VisibilityEnabler2D2_screen_exited"]
+[connection signal="body_entered" from="jumper" to="." method="_on_jumper_body_entered"]
+[connection signal="body_entered" from="smoke" to="." method="_on_smoke_body_entered"]

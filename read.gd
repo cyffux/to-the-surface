@@ -11,9 +11,9 @@ func _ready():
 
 func _process(delta):
 	time+=delta
-	if time <5:
-		$Node2D/Sprite.scale.y+=0.1*order
-		$Node2D/Sprite.position.y-=0.1*order
+	if time <2.5:
+		$Node2D/Sprite.scale.y+=0.2*order
+		$Node2D/Sprite.position.y-=0.2*order
 	else:
 		$Node2D2/Label.text=text
 		$Node2D2/Label.visible=true

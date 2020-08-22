@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/land/monochrome_tilemap_packed.png" type="Texture" id=1]
+[ext_resource path="res://shulk.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "sulkwalk"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 321, 322 ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8.17591, 7.95301 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 5.00566, 4.78277 )
+
+[node name="shulk" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 20
+hframes = 20
+frame = 321
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/sulkwalk = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

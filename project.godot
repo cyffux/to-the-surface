@@ -17,7 +17,8 @@ _global_script_class_icons={
 
 config/name="to the surface"
 run/main_scene="res://menue.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://sprites/land/to the surface game.png"
+config/icon="res://sprites/land/to the surface game.png"
 
 [display]
 

@@ -21,6 +21,7 @@ scale = Vector2( 1.50391, 0.143779 )
 texture = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="."]
+visible = false
 margin_left = 377.273
 margin_top = 404.23
 margin_right = 578.273
